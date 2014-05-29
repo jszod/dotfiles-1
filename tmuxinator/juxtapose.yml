@@ -1,0 +1,19 @@
+# ~/.tmuxinator/base_app.yml
+# you can make as many tabs as you wish...
+
+project_name: Juxtapose
+project_root: ~/Archive/work/rails/juxtapose
+# rvm: 1.9.2@rails_project
+# pre: sudo /etc/rc.d/mysqld start
+tabs:
+  - editor:
+      layout: 54f2,154x46,0,0[154x38,0,0,154x7,0,39]
+      # layout: main-horizontal
+      panes:
+        - vim
+        - #empty, will just run plain bash
+  - console: # empty
+  - specss: # empty terminal for running specs
+  - server: RACK_ENV=development foreman start
+  - mongoDB: mongod --dbpath /usr/local/var/mongodb
+  - gem server: gem server # Starts gem server at localhost:8808 to view local gem documentation

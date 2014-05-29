@@ -1,0 +1,17 @@
+# ~/.tmuxinator/base_app.yml
+# you can make as many tabs as you wish...
+
+project_name: base_app
+project_root: ~/Archive/work/rails/base_app
+# rvm: 1.9.2@rails_project
+# pre: sudo /etc/rc.d/mysqld start
+tabs:
+  - editor:
+      layout: 54f2,154x46,0,0[154x38,0,0,154x7,0,39]
+      # layout: main-horizontal
+      panes:
+        - vim
+        - #empty, will just run plain bash
+  - console: # empty
+  - server: RACK_ENV=development foreman start
+  - mongoDB: mongod --dbpath /usr/local/var/mongodb
