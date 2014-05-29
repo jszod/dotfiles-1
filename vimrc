@@ -1,12 +1,12 @@
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
+execute pathogen#helptags()
 
 set nocompatible
 set nobackup
 set noswapfile
 
 filetype plugin indent on
-syntax enable
+syntax on
 
 "= General Settings ==================================================
 set background=dark " Assume a dark background
