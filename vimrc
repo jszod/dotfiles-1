@@ -15,10 +15,12 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()
-filetype plugin indent on
+"=====================================================================
 
+filetype plugin on
 syntax on
 
 "= General Settings ==================================================
@@ -38,8 +40,7 @@ set tabstop=2
 set expandtab
 set smartindent
 set smarttab
-"=====================================================================
-
+"===================================================================== 
 "= Search options ====================================================
 set incsearch
 set ignorecase
