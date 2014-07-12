@@ -1,11 +1,24 @@
-execute pathogen#infect()
-execute pathogen#helptags()
-
 set nocompatible
+filetype off		" required
 set nobackup
 set noswapfile
 
+"= Vundle and plugin configuration ==================================
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim' 
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+
+call vundle#end()
 filetype plugin indent on
+
 syntax on
 
 "= General Settings ==================================================
