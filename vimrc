@@ -15,7 +15,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'   " NOTE: this is not fully configured yet need to add syntax checkers
 
 call vundle#end()
 "=====================================================================
