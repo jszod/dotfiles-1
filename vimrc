@@ -17,9 +17,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'     " NOTE: this is not fully configured yet need to add syntax checkers
 
-Plugin 'quanganhdo/grb256'        "grb256 color theme
-Plugin 'brettof86/vim-codeschool' "codeschool color theme
-Plugin 'wesgibbs/vim-irblack'     "ir_black theme
+Plugin 'dandorman/vim-colors'     " A collection of VIM colors schemes
+
 
 call vundle#end()
 "=====================================================================
@@ -69,24 +68,26 @@ set statusline+=[%L]                         " length
 set guifont=Monaco:h11
 
 "= Set Color Scheme ==================================================
+set t_Co=256              " Set terminal to use 256 colors
 set background=dark
-if has('gui_running')
-" colorscheme railscasts
-  "colorscheme grb256
-  colorscheme codeschool
-  "colorscheme ir_black
-"  colorscheme herald
-else
-"  colorscheme railscasts
-  "colorscheme grb256
-  colorscheme codeschool
-  "colorscheme ir_black
-end
+colorscheme tomorrow-night
+"if has('gui_running')
+"" colorscheme railscasts
+  ""colorscheme grb256
+  "colorscheme codeschool
+  ""colorscheme ir_black
+""  colorscheme herald
+"else
+""  colorscheme railscasts
+  ""colorscheme grb256
+  "colorscheme codeschool
+  ""colorscheme ir_black
+"end
 
 "= Set Cursor Style ==================================================
- "set cursorline
+set cursorline
 " set cursorcolumn
-" :highlight CursorLine ctermbg=darkgray
+":highlight CursorLine ctermbg=darkgray
 
 "= Quickly Scroll and Toggle Buffers =================================
 nmap <leader><right><right> :bn<CR>
