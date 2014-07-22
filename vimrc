@@ -18,7 +18,9 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'     " NOTE: this is not fully configured yet need to add syntax checkers
 
 Plugin 'dandorman/vim-colors'     " A collection of VIM colors schemes
-
+Plugin 'bling/vim-airline'        " Airline status bar plugin
+Plugin 'godlygeek/tabular'        " Required for markdown highlighting belowj
+Plugin 'plasticboy/vim-markdown'  " Markdown syntax highlighting
 
 call vundle#end()
 "=====================================================================
@@ -70,19 +72,14 @@ set guifont=Monaco:h11
 "= Set Color Scheme ==================================================
 set t_Co=256              " Set terminal to use 256 colors
 set background=dark
-colorscheme tomorrow-night
-"if has('gui_running')
+
+if has('gui_running')
+  colorscheme molokai
 "" colorscheme railscasts
-  ""colorscheme grb256
-  "colorscheme codeschool
-  ""colorscheme ir_black
-""  colorscheme herald
-"else
-""  colorscheme railscasts
-  ""colorscheme grb256
-  "colorscheme codeschool
-  ""colorscheme ir_black
-"end
+else
+  colorscheme molokai
+"  colorscheme railscasts
+end
 
 "= Set Cursor Style ==================================================
 set cursorline
@@ -106,4 +103,10 @@ map <F2> :NERDTreeToggle<CR>
 
 "= Fugitive Buffer Cleanup ===========================================
 autocmd BufReadPost fugitive://* set bufhidden=delete
-"=====================================================================
+
+
+"= Airline status bar settings ========================================
+let g:airline#extensions#tabline#enabled = 1
+
+"= Vim-markdown settings ==============================================
+let g:vim_markdown_folding_disabled = 1
