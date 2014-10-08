@@ -21,6 +21,7 @@ Plugin 'dandorman/vim-colors'     " A collection of VIM colors schemes
 Plugin 'bling/vim-airline'        " Airline status bar plugin
 Plugin 'godlygeek/tabular'        " Required for markdown highlighting belowj
 Plugin 'plasticboy/vim-markdown'  " Markdown syntax highlighting
+Plugin 'elixir-lang/vim-elixir'   " Elixir syntax highlighting, file detection, auto indet
 
 call vundle#end()
 "=====================================================================
