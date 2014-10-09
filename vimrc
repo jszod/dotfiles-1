@@ -26,7 +26,7 @@ Plugin 'elixir-lang/vim-elixir'   " Elixir syntax highlighting, file detection, 
 call vundle#end()
 "=====================================================================
 
-filetype plugin on
+filetype plugin indent on
 syntax on
 
 "= General Settings ==================================================
