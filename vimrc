@@ -22,6 +22,7 @@ Plugin 'bling/vim-airline'        " Airline status bar plugin
 Plugin 'godlygeek/tabular'        " Required for markdown highlighting belowj
 Plugin 'plasticboy/vim-markdown'  " Markdown syntax highlighting
 Plugin 'elixir-lang/vim-elixir'   " Elixir syntax highlighting, file detection, auto indet
+Plugin 'greyblake/vim-preview'    " Markdown preview
 
 call vundle#end()
 "=====================================================================
@@ -101,6 +102,8 @@ map <F2> :NERDTreeToggle<CR>
 " set spellsuggest=5
 
 "|||||||||||||||||||||||||||| PLUGINS ||||||||||||||||||||||||||||||||
+" = NerdTree setting ================================================
+let NERDTreeShowHidden=1 
 
 "= Fugitive Buffer Cleanup ===========================================
 autocmd BufReadPost fugitive://* set bufhidden=delete
